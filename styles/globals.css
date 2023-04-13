@@ -1,107 +1,468 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+* > *{
+  margin:0;
+  padding:0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
+html {
+  scroll-behavior: smooth !important; 
+}
+@media (max-width:1200px){
+  html{
+    font-size: 15px;
+  }
+}
+@media (max-width:800px){
+  html{
+    font-size: 13px;
   }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+body{
+  font-family: 'Poppins', sans-serif;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+
+
+/* Header */
+
+header{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 200px;
+  border-bottom:1px solid black;
+  font-size: 1.5rem;
+  color: #2d2d29;
+  font-weight: bolder;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media (max-width:1200px){
+  header{
+    padding: 32px 100px;
+  }
+}
+@media (max-width:800px){
+  header{
+    padding: 32px 30px;
+  }
 }
 
-a {
-  color: inherit;
+header .about{
+  display: flex;
+}
+header .about a{
   text-decoration: none;
+  color: #2d2d29;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+header div p {
+  margin-left: 30px;
+  letter-spacing: 0.05cm;
+}
+
+header .menu-language{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding-left:50px;
+  padding-right: 0;
+
+}
+
+header .menu-language button{
+  border: 0;
+  background: inherit;
+  font-size: 1rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.menu-language .menu-language-divider{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 50px;
+  height: 2px;
+  align-items: center;
+}
+
+.menu-language .menu-language-divider .menu-language-divider-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(185,185, 179, 0.7);
+}
+
+.menu-language .menu-language-divider .menu-language-divider-front{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  transition: all .3s;
+}
+
+
+
+/* section1 */
+
+
+.sections .section1{
+  padding:100px 40px 50px 40px;
+  background-color: white;
+}
+
+@media (max-width:1400px){
+  .section1{
+    font-size: 13px;
   }
 }
+
+@media (max-width:1200px){
+  .section1{
+    font-size: 11px;
+  }
+}
+
+@media (max-width:1000px){
+  .section1{
+    font-size: 9px;
+  }
+}
+
+
+.sections .section1 h1{
+  font-size: 11rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  color: #6e6d63;
+}
+
+@media (max-width:1400px){
+  .sections .section1 h1{
+    font-size: 10rem;
+  }
+}
+
+@media (max-width:1200px){
+  .sections .section1 h1{
+    font-size: 9rem;;
+  }
+}
+
+@media (max-width:1000px){
+  .sections .section1 h1{
+    font-size: 6rem;
+  }
+}
+
+@media (max-width:800px){
+  .sections .section1 h1{
+    font-size: 4rem;
+  }
+}
+
+
+.sections .section1 h1 span{
+  padding: 0 7px;
+}
+
+.sections .section1 h1 span:first-child:hover,.sections .section1 h1 span:nth-child(3):hover , .sections .section1 h1 span:nth-child(5):hover,.sections .section1 h1 span:nth-child(7):hover{
+  color:#b4b3ac ;
+}
+
+.sections .section1 h1 span:nth-child(2):hover , .sections .section1 h1 span:nth-child(4):hover,.sections .section1 h1 span:nth-child(6):hover{
+  color:#d6ae5d ;
+}
+
+
+.sections .section1 h1:first-child,.sections .section1 h1:last-child{
+  text-align: start;
+}
+
+.sections .section1 h1:nth-child(2){
+  text-align: end;
+}
+
+.sections .section1 h1:last-child{
+  margin-left: 140px;
+}
+@media (max-width:800px){
+  .sections .section1 h1:last-child{
+    margin-left: 0;
+  }
+}
+
+/* section2 */
+
+.sections .section2{
+  padding: 360px 100px 50px 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sections .section2 .frontimg{
+  position: absolute;
+  top: 90px;
+  left: 1050px;
+  z-index: 4; 
+}
+
+.sections .section2 .frontimg:hover{
+  z-index: 2; 
+  display: none;
+}
+
+
+.sections .section2 .backimg{
+  position: absolute;
+  top: 90px;
+  left: 1050px;
+  z-index: 3; 
+}
+@media (max-width:1350px){
+  .sections .section2 .frontimg{
+    left: 450px;
+  }
+  .sections .section2 .backimg{
+    left: 450px;
+  }
+
+}
+
+
+.sections .section2 h2{
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  color: #2d2d29;
+  z-index: 5;
+  padding:0 600px;
+}
+
+@media (max-width:1400px){
+  .sections .section2 h2{
+    padding: 0 200px;
+  }
+}
+@media (max-width:800px){
+  .sections .section2 h2{
+    padding: 0 50px;
+  }
+}
+
+
+/* section3*/
+
+
+.section3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+  margin: 200px 0;
+}
+
+
+.section3 h3{
+  font-size: 2.5rem;
+  margin-left: 35px;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  color: #2d2d29;
+  letter-spacing: 0.075cm;
+}
+.section3 p{
+  padding: 30px 60px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: .6;
+  font-family: auto;
+}
+@media (max-width:800px){
+ .section3 .backimg{
+    display: none;
+  }
+  }
+
+
+/* section4 */
+
+.section4{
+  text-align: center;
+  margin: 200px 0;
+}
+
+.section4 h3{
+  font-size: 2.5rem;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  color: #2d2d29;
+  margin-bottom: 50px;
+}
+
+.section4 p img{
+  margin: 0 25px;
+}
+
+
+
+/* Footer */
+
+footer{
+  margin-top: 200px;
+}
+
+footer .title{
+  display: flex;
+  justify-content: center;
+  font-size: 3.5rem;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  color: #2d2d29;
+}
+
+footer .title h3{
+  margin: 0 10px;
+}
+
+footer .title h3 span{
+  margin: 0 1px;
+}
+
+
+footer .title h3 span:first-child:hover,footer .title h3 span:nth-child(3):hover , footer .title h3 span:nth-child(5):hover,footer .title h3 span:nth-child(7):hover{
+  color:#b4b3ac ;
+}
+
+footer .title h3 span:nth-child(2):hover , footer .title h3 span:nth-child(4):hover,footer .title h3 span:nth-child(6):hover{
+  color:#d6ae5d ;
+}
+
+
+footer .info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+
+footer .info .social , footer .info .contact{
+  text-align: center;
+  padding: 30px 250px 70px 0;
+}
+@media (max-width:1000px){
+footer .info .social , footer .info .contact{
+  padding: 30px 150px 70px 0
+  }
+}
+@media (max-width:800px){
+  footer .info .social , footer .info .contact{
+    padding: 30px 75px 70px 0
+    }  
+}
+@media (max-width:500px){
+  footer .info .social , footer .info .contact{
+    padding: 30px 24px 70px 0
+    }
+  }
+@media (max-width:400px){
+  footer .info .social , footer .info .contact{
+    padding: 30px 0 70px 0
+    }
+  }
+footer .info .social{
+  border-right: 1px solid;
+  border-left:1px solid
+}
+footer .info .contact{
+  border-right: 1px solid ;
+}
+
+
+footer .info .social a , footer .info .contact a{
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #2d2d29;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+
+footer .info .social a svg , footer .info .contact a svg{
+  color: white;
+}
+
+footer .info .social a:hover , footer .info .contact a:hover{
+  opacity: .8;
+}
+
+footer .info .social .links{
+  display: flex;
+}
+
+
+
+footer .info h4{
+  font-size: 1rem;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  color: #2d2d29;
+  text-align: start;
+  padding-left: 30px;
+}
+
+footer .backtop {
+  padding-left: 30px;
+  overflow: hidden;
+}
+
+footer .backtop:hover{
+  background-color: #2d2d29;
+}
+
+footer .backtop a{
+  text-decoration: none;
+  color: #2d2d29;
+  font-size: 4rem;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+}
+footer .backtop a:hover{
+  color: white;
+}
+
+footer .backtopp {
+  display: flex;
+  
+}
+
+footer .backtopp:hover{
+  animation: scrollText 1.2s infinite linear;
+}
+
+footer .backtopp div{
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+
+
+@keyframes scrollText {
+  from   { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+
