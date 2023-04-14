@@ -84,9 +84,7 @@ export default function Home() {
           </div>
           <div className="section2" id="about"  >
             <h2>{left==50 ? par1A[2] : part1B[2]}</h2>
-            <div className="frontimg" data-aos="zoom-out-up" data-aos-duration="1000">
-            <img src="https://uploads-ssl.webflow.com/5e2de6d42ca1f7c4e812d49e/5e51ac3d2c16e82f4b0cc7bd_Square_Gif_-_Hourglass%202.png" alt="/" height={350} width={350}  />
-            </div>
+           
             <div className="backimg" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="400">
             <img src="https://uploads-ssl.webflow.com/5e2de6d42ca1f7c4e812d49e/5e4079c23ddc132786dcdd27_Square_Gif_-_Hourglass.gif" alt="/" height={350} width={350}  />
             </div>
