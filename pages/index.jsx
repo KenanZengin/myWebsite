@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Head from "next/head"
 import { useState } from "react"
 
 import {AiOutlineMail} from "react-icons/ai"
@@ -28,6 +29,9 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Kenan Zengin</title>
+      </Head>
       <header id="top" data-aos="flip-up" data-aos-duration="1600">
         <p>Kenan Zengin </p>
         <div className="about">
@@ -84,16 +88,14 @@ export default function Home() {
           </div>
           <div className="section2" id="about"  >
             <h2>{left==50 ? par1A[2] : part1B[2]}</h2>
-            <div className="frontimg" data-aos="zoom-out-up" data-aos-duration="1000">
-            <img src="https://uploads-ssl.webflow.com/5e2de6d42ca1f7c4e812d49e/5e51ac3d2c16e82f4b0cc7bd_Square_Gif_-_Hourglass%202.png" alt="/" height={350} width={350}  />
-            </div>
+            
             <div className="backimg" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="400">
             <img src="https://uploads-ssl.webflow.com/5e2de6d42ca1f7c4e812d49e/5e4079c23ddc132786dcdd27_Square_Gif_-_Hourglass.gif" alt="/" height={350} width={350}  />
             </div>
 
 
           </div>
-          <div className="section3" data-aos="flip-up" data-aos-delay="200" >
+          <div className="section3" data-aos="flip-up" data-aos-delay="100" >
             <div className="backimg">
             <img src="https://uploads-ssl.webflow.com/5e2de6d42ca1f7c4e812d49e/5e4079e4de8ab95893f36a87_Square_Gif_-_Skater%202.gif" alt="/" height={505} width={505}  />
             </div>
